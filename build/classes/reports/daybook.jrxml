@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="421" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0b3f05a2-627a-4723-81a9-e8eedd48a6cc">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="74"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="hql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="voucherAmount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[voucherAmount]]></fieldDescription>
+	</field>
+	<field name="voucherDate" class="java.util.Date">
+		<fieldDescription><![CDATA[voucherDate]]></fieldDescription>
+	</field>
+	<field name="voucherExpence" class="java.lang.String">
+		<fieldDescription><![CDATA[voucherExpence]]></fieldDescription>
+	</field>
+	<field name="voucherId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[voucherId]]></fieldDescription>
+	</field>
+	<filterExpression><![CDATA[$F{voucherId}]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="115" y="13" width="337" height="18" uuid="b3672e6c-2ad0-44b8-a1fd-3412772da5af"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[CHANDRA PRIVATE INDUSTRIAL TRAINING INSTITUTE ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="0" width="100" height="14" uuid="efa98cee-6f58-4f5b-b31b-314d91076788"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[VOUCHER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="31" width="337" height="14" uuid="261cd735-5932-4f1a-a991-9aa4a995d953"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NAHAR ROAD, CHOWDHARY PURWA, JANKIPURAM, LUCKNOW.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="44" width="337" height="14" uuid="b5d3da5c-2e23-4903-af73-e0825a9da271"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Website- www.cpitil.in   email- cpitil@rediffmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="57" width="337" height="14" uuid="829b9ebd-5066-4ae8-a5f2-c4fb1c470498"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CONTACT NO. – 9125615587, 9415424827, 9120499876.]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="105" height="91" uuid="52c3ca8c-aac3-4491-89a3-2f119c8d22a8"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["D:\\NetBeansProjects\\CPITI\\src\\cpiti\\images\\cpiti.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="105" y="91" width="450" height="1" uuid="96a08c38-f1e6-431c-a156-d4a50eef64e7"/>
+			</line>
+			<textField>
+				<reportElement x="455" y="57" width="100" height="14" uuid="b2111e19-2be8-4541-9d12-e179a5c6b37f"/>
+				<textFieldExpression><![CDATA["No. : "+$F{voucherId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="71" width="100" height="14" uuid="93770afa-feeb-4222-a27f-cbe383d0cab3"/>
+				<textFieldExpression><![CDATA["Date : "+$F{voucherDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="30" height="15" backcolor="#CCCCCC" uuid="dc166109-f6d8-4c2b-a769-5ce266d5590a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[S.No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="30" y="0" width="377" height="15" backcolor="#CCCCCC" uuid="f5a6a3b2-d8d8-4b5e-ac23-d6fd1dc8a5a9"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Particulars]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="407" y="0" width="100" height="15" backcolor="#CCCCCC" uuid="1fcd860b-504e-4bd9-842a-13de258bef81"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rs.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="507" y="0" width="48" height="15" backcolor="#CCCCCC" uuid="6596c77e-dcd7-4563-9f1f-e36c42e046d9"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[P.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="12">
+			<textField>
+				<reportElement x="0" y="0" width="30" height="12" uuid="5c85dab3-8e7c-4412-991a-b002fa0c29a1"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="377" height="12" uuid="31ac0180-0c82-4478-91e9-5470720c7e4c"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{voucherExpence}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="100" height="12" uuid="9855aa13-fb00-4400-8d53-29146638ac74"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{voucherAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="507" y="0" width="48" height="12" uuid="ad21039d-3c50-4717-9914-8d44b3725641"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[00]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="185" height="18" uuid="579ba2d6-5f87-4bc3-8ade-3ef0a86716b7"/>
+				<text><![CDATA[Approved by :_____________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="36" width="185" height="18" uuid="56df8395-3c93-4e13-b5f4-8c96d49b4ed0"/>
+				<text><![CDATA[Signature :_______________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="36" width="180" height="18" uuid="c8f906b4-f085-4776-bb06-e302d0fe52e5"/>
+				<text><![CDATA[Receiver's Signature_______________]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="9bbd350e-32ba-4697-81b3-26854395b740"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch"/>
+	</summary>
+</jasperReport>
